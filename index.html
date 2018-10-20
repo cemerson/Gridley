@@ -4,8 +4,24 @@
 	<meta charset="UTF-8">
 	<title>Gridley™</title> 
 	<link rel="stylesheet" href="css/gridley.css">
+
+<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+
+<!-- 
+<script type="text/javascript">
+$(document).ready(function() {
+  var bodyHeight = $("body").height();
+  var vwptHeight = $(window).height();
+  if (vwptHeight > bodyHeight) {
+    $("footer#edinc").css("position","absolute").css("bottom",0);
+  }
+});
+</script>
+	-->
+
 </head>
 <body>
+	<div id="page">
 
 	<h1>Gridley™</h1>
  
@@ -17,14 +33,15 @@
 <hr/>
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="QZY2UVUQYA6NC">
-<table>
-<tr><td><input type="hidden" name="on0" value="(Required) Activation String">(Required) Activation String</td></tr><tr><td><input type="text" name="os0" maxlength="200"></td></tr>
-</table>
+<input type="hidden" name="hosted_button_id" value="FYLP8L8VU36SS">
 <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
 
-	
+</div>
+
+<footer id="edinc">
+	&copy; 2018, Emerson Design, Inc.
+</footer>
 </body>
 </html>

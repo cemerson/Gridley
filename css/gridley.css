@@ -2,3 +2,46 @@
 			font-family: sans-serif;
 			
 		} 
+ 
+
+html{
+	background-color:#eee;
+}
+#page{
+
+	background-color:#fff;
+	width:80%;
+	max-width:930px;
+	margin:0 auto;
+	height:100%;
+	display:block;
+	margin-bottom:-50px;
+}
+html, body {
+    height: 100%;
+    /* The html and body elements cannot have any padding or margin. */
+}
+
+footer{
+	background-color:#333;
+	width:80%;
+	max-width:930px;
+	margin:0 auto;
+	height:40px;
+	color:#999;
+	padding-top:10px !important;
+}
+html,
+body{
+	padding:0;
+	margin:0;
+}
+
+h1,h2{
+	margin-top:0;
+	padding-top:10px;
+}
+
+#page,footer{
+	padding:0px 30px;
+}
