@@ -12,6 +12,24 @@ p,li{
 	line-height:22px;
 	font-size:16px;
 }
+label small{
+	display:block;
+	font-size:12px;
+}
+label small, label small a,
+label small a:visited,label small a:active{
+color:#777;
+text-align:left;
+margin-top:4px;
+}
+label{
+	display:inline-block;
+	padding:10px 10px;
+	background-color:#ffe818;
+	border-radius:6px;
+	text-align:center;
+	margin-bottom:12px;
+}
 html{
 	background-color:#eee;
 }
