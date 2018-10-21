@@ -1,9 +1,11 @@
 <?xml version="1.0"?>
 <versions>
-	<version build="1.1.2018102x">
-		<![CDATA[First official update!]]>
+	<version>
+		<build>1.1.2018102x</build>
+		<desc>First official update</desc>
 	</version>		
-	<version build="1.0.20180901">
-		<![CDATA[Initial release version!]]>
+	<version>
+		<build>1.0.20180901</build>
+		<desc>Initial release version</desc>
 	</version>	
 </versions>
