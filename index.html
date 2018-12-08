@@ -264,16 +264,170 @@ html,body{
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);
 }
 
+form{
+    margin:0;
+}
 
+.paypal_form.not_ready input[type="image"] {
+    opacity: .8;
+    /*pointer-events: none;*/
+}
 
-    </style>
+#os0{
+    padding: 6px;
+    font-size: 17px;
+    color: #555;
+    width: 310px;
+    text-align: center;
+    border-radius: 3px;
+    border: 2px solid dodgerblue;
+}
+small {
+    color:#888;
+    font-size:12px;
+    width:325px;
+    text-align:center;
+    display:inline-block;
+    margin:5px auto;
+    padding:3px 0px;
+    border-radius:2px;
+    background-color:#eee;
+}
 
+.paypal_form table tr td{
+    padding-top:10px;
+    vertical-align: middle;
+}
+.paypal_form table tr td input[type=text]{
+    /* margin-top:-10px; */
+}
+
+*::placeholder,
+#os0::placeholder{
+    color:#ccc !Important;
+}
+a.big_button {
+    background-image:url(images/icon_windows.png);
+    background-repeat:no-repeat;
+    background-size:25px;
+    background-position:90% 5px;
+}
+
+small.download {
+    width: 250px;
+}
+input[type="image"]:focus,
+input[type="image"]:active,
+input[type="image"] {
+    outline-color:transparent !important;
+}
+
+small a.colorbox.cboxElement:hover,
+small a:hover{
+    color:#555;
+}
+
+small a:active,small a:visted,small a{
+    text-decoration:none;
+    color:#888;
+}
+small a.colorbox.cboxElement {
+
+color:#888;
+text-decoration:none;
+
+}
+
+#paypal_form,
+#paypal_thanks{
+    display:none;
+}
+ 
+div#paypal_thanks {
+    background-color: #fdff99;
+    color: #2ea52e;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: left;
+    border: 2px solid #2ea52e;
+    box-shadow: -1px 3px 9px #999;
+    font-size: 18px;
+    margin-top:-5px;
+    position: relative;
+    width: 98%;
+}
+
+div#paypal_thanks{
+    line-height:23px;
+    padding:15px 3%;
+    width:92%
+}
+div#paypal_thanks a{
+    color:#125812;
+}
+
+label#lbAgree {
+    background-color: transparent;
+    color: #555;
+    font-size: 13px;
+    line-height: 15px;
+    margin: 0px;
+    width: 98%;
+    text-align: left;
+    margin-bottom: -5px;
+    margin-top: 0px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-radius: 0px;  
+}
+
+label#lbAgree input{
+    margin-left:0px;
+    margin-right:8px;
+    margin-top:0px;
+    display:block;
+    float:left;
+}
+
+div#terms *{
+    font-size:12px;
+    line-height:16px;
+    color:#666;
+}
+div#terms.show{
+    display:inline-block;
+}
+div#terms {        
+    display:none;
+    background-color:#eee;
+    border-radius:6px;
+    position:relative;
+    height:200px;    
+    overflow-x:none;
+    overflow-y:scroll;    
+    padding:10px 0px 30px;
+}
+
+#lbAgree a {
+    color:#555;
+}
+#paypal_table td{
+    width:auto;
+    max-width:400px;    
+}
+
+   </style>
 </head> 
 
 <body>
     <div id="page">
-        <h1>Gridley™</h1>
+
+        <h1 onclick='home()'>Gridley™</h1>
         <p>  
+            <h2>What is Gridley?</h2>
             <a href='images/gridley-example-mg.png?raw=true' class='colorbox'><img src="images/gridley-example-mg-thumb.png?raw=true" alt="Gridley™ Example" style="float:right;"/></a>
             I needed a utility that could quickly convert a handful of images into a simple, single "grid" image. After looking around and not finding exactly what I wanted I just made something myself ... which I've named Gridley™. It's a very simple, but powerful, utility that can save a lot of time in a variety of situations:
             <ul>
@@ -281,22 +435,89 @@ html,body{
                 <li>Support Portal Ticket Screenshots</li>
                 <li>Comparing Design Mockups</li>
                 <li>Consolidating Photos</li>
-                <li>... and many more!</li>
+                <li>Compact Image Archival</li>
+                <li>... and plenty more I'm sure</li>
             </ul>
             <br />
-            Try out Gridley™ today and see if you find it useful too!
-            <br />
+            Download Gridley™ today and see if you find it useful too!            
+            <br/>
             <a href="https://github.com/cemerson/gridley/tree/master/releases" class="big_button">Download Now</a>   
+            <!-- <small class="download">For Windows 7 and higher</small><br /> -->
+            <!-- <input type="checkbox" id="chkLegal" name="chkLegal"> -->
+            <label id="lbAgree">By downloading and using this software you agree to the <a href='Javascript:showTerms();'>terms of use</a>.</label>
+        <div id="terms">
+<blockquote>
+<p style="text-align: justify;">End-User License Agreement for Gridley™</p>
+<p>This End-User License Agreement (EULA) is a legal agreement between you (either an individual or a single entity) and the mentioned author (Emerson Design, Inc.) of this Software for the software product identified above, which includes computer software and may include associated media, printed materials, and "online" or electronic documentation ("SOFTWARE PRODUCT").</p>
+<p style="text-align: justify;">By installing, copying, or otherwise using the SOFTWARE PRODUCT, you agree to be bounded by the terms of this EULA.<br>
+If you do not agree to the terms of this EULA, do not install or use the SOFTWARE PRODUCT.</p>
+<p>SOFTWARE PRODUCT LICENSE<br>
+a) Gridley™ is being distributed as Freeware for personal, commercial use, non-profit organization, educational purpose. It NOT not be included with CD-ROM/DVD-ROM distributions. You are NOT allowed to make a charge for distributing this Software (either for profit or merely to recover your media and distribution costs) whether as a stand-alone product, or as part of a compilation or anthology, nor to use it for supporting your business or customers. It may NOT be distributed on any other website or any other distribution mechanism.</p>
+<p style="text-align: justify;">b) Gridley™ single user license version is available for those who purchase a license.</p>
+<p>1. GRANT OF LICENSE. This EULA grants you the following rights: Installation and Use on one computer. Due to license mechanic restrictions you must purchase an additional license to use on additional computers.</p>
+<p>Reproduction and Distribution. You may reproduce and distribute an unlimited number of copies of the SOFTWARE PRODUCT; provided that each copy shall be a true and complete copy, including all copyright and trademark notices, and shall be accompanied by a copy of this EULA.</p>
+<p style="text-align: justify;">Copies of the SOFTWARE PRODUCT may be distributed as a standalone product or included with your own product as long as The SOFTWARE PRODUCT is not sold or included in a product or package that intends to receive benefits through the inclusion of the SOFTWARE PRODUCT.</p>
+<p style="text-align: justify;">The SOFTWARE PRODUCT may be included in any free or non-profit packages or products.</p>
+<p>2. DESCRIPTION OF OTHER RIGHTS AND LIMITATIONS.<br>
+Limitations on Reverse Engineering, Decompilation, Disassembly and change (add,delete or modify) the resources in the compiled the assembly. You may not reverse engineer, decompile, or disassemble the SOFTWARE PRODUCT, except and only to the extent that such activity is expressly permitted by applicable law notwithstanding this limitation.</p>
+<p>Separation of Components.<br>
+The SOFTWARE PRODUCT is licensed as a single product. Its component parts may not be separated for use on more than one computer.</p>
+<p>Termination.<br>
+Without prejudice to any other rights, the Author of this Software may terminate this EULA if you fail to comply with the terms and conditions of this EULA. In such event, you must destroy all copies of the SOFTWARE PRODUCT and all of its component parts.</p>
+<p>3. COPYRIGHT.<br>
+All title and copyrights in and to the SOFTWARE PRODUCT (including but not limited to any images, photographs, clipart, libraries, and examples incorporated into the SOFTWARE PRODUCT), the accompanying web or printed materials, and any copies of the SOFTWARE PRODUCT are owned by the Author of this Software. The SOFTWARE PRODUCT is protected by copyright laws and international treaty provisions. Therefore, you must treat the SOFTWARE PRODUCT like any other copyrighted material. The licensed users or licensed company can use all functions, example, templates, clipart, libraries and symbols in the SOFTWARE PRODUCT to create new diagrams and distribute the diagrams.</p>
+<p>LIMITED WARRANTY</p>
+<p>NO WARRANTIES.<br>
+The Author of this Software expressly disclaims any warranty for the SOFTWARE PRODUCT. The SOFTWARE PRODUCT and any related documentation is provided "as is" without warranty of any kind, either express or implied, including, without limitation, the implied warranties or merchantability, fitness for a particular purpose, or noninfringement. The entire risk arising out of use or performance of the SOFTWARE PRODUCT remains with you.</p>
+<p>NO LIABILITY FOR DAMAGES.<br>
+In no event shall the author of this Software be liable for any special, consequential, incidental or indirect damages whatsoever (including, without limitation, damages for loss of business profits, business interruption, loss of business information, or any other pecuniary loss) arising out of the use of or inability to use this product, even if the Author of this Software is aware of the possibility of such damages and known defects.</p></blockquote>
+
+        </div>            
+
         </p>
         <hr />
         <h2>Purchasing a License</h2>
-        <p>
-            Gridley™ is free to download and use as much as you'd like but if you end up using it often and get value out of it please consider buying a license. For just the price a coffee you can remove the watermark and other "unregistered" nagging elements, you'll qualify for future updates and you'll also feel really good about yourself! For more information on purchasing a license click the button below:
-            <a href="https://apps.chris-emerson.com/store/product/gridley/" target="_blank" class="big_button">Gridley Single User License</a>
+                  
+            <!-- <a href="https://apps.chris-emerson.com/store/product/gridley/" target="_blank" class="big_button">Gridley Single User License</a> -->
+
+<p>
+            Gridley™ is free to download and use as much as you'd like but if you end up using it often and get value out of it please consider buying a license. For just the price a coffee you can remove the watermark and other "unregistered" nagging elements, qualify for any license-only updates in the future and you'll also feel really good about yourself! 
+        <div id="paypal_thanks">
+            Thank you for purchasing a single user license for Gridley! You should get an email with your license string within 24 hours. If you have any questions before or after activating your license please send an email to <a href='mailto:gridley.edinc@gmail.com'>gridley.edinc@gmail.com</a>.
+        </div>  
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="paypal_form" class='paypal_form not_ready'>
+<table id="paypal_table">
+<input type="hidden" name="on0" id="on0" value="ActivationKey">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="8GTUP8SJV8DZJ">    
+<tr><td colspan=2>
+    To buy a single user license enter your Activation Key below and click the Buy Now button to go through the secure PayPal payment process.
+    <br/>&nbsp;
+</td>
+</tr>
+<tr><td>
+    <input type="text" id="os0" name="os0" maxlength="200" placeholder="Enter Your Activation Key ...">
+<br/><small><a href='images/where-activation-key.png?raw=true' class='colorbox'>Click here to see where to find your activation key.</a></small></td>
+    <td>
+        <input type="image" width="160" src="images/buy-now-button.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+        <!-- https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif -->
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+    </td>
+</tr>
+</table>
+</form>
+
+&nbsp;
+
             <h2>Support or Suggestions?</h2>
             <p>If anyone has a problem using Gridley™ or idea to make it better please <a href="https://github.com/cemerson/gridley/issues" target="_blank">create a new issue here</a> and I'll get to it as quickly as I can.</p>
             <h2>Updates</h2>
             <p>Gridley may be updated from time to time in the future so the application has a built-in method to check for updates on demand.</p>
+
+
+
+
     </div>
     <footer id="edinc">
         &copy; 2018, Emerson Design, Inc. 
@@ -318,8 +539,60 @@ html,body{
     <script>
     $(document).ready(function() {
         $('.colorbox').colorbox(); //{key:value, key:value, key:value});
+
+        $('#paypal_form').on('keyup keypress', function(e) {
+          var keyCode = e.keyCode || e.which;
+          if (keyCode === 13) { 
+            e.preventDefault();
+            return false;
+          }
+        });        
+
+        $('#os0').on('input',function(e){            
+            if(
+                ($('#os0').val() == '') ||
+                ($('#os0').val().length < 29) 
+                ){
+                $('.paypal_form').addClass('not_ready');
+            }else{
+                $('.paypal_form').removeClass('not_ready');
+            }
+        });        
+
+        $('#paypal_form').bind('submit',function(e){
+            if(
+                ($('#os0').val() == '') ||
+                ($('#os0').val().length < 29) 
+                ){
+                alert('Please enter a valid Activation Key before clicking the Buy Now button.');
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        processPageVars();
+
     });
     /* 20181021222705 */
+
+    function processPageVars(){
+        $('#paypal_form').hide();
+        $('#paypal_thanks').hide();        
+        if(document.location.search.indexOf('?p=1',0)>-1){            
+            $('#paypal_thanks').show();
+        }else{
+            $('#paypal_form').show();            
+        }
+    }
+
+    function home(){
+        document.location.href = 'index.html'
+    }
+
+    function showTerms(){
+        $('#terms').toggleClass('show');
+    }
+
     </script> 
 </body> 
 
