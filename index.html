@@ -611,14 +611,7 @@ Small preview of a few ways to use Gridley™.
         });        
 
         $('#os0').on('input',function(e){            
-            if(
-                ($('#os0').val() == '') ||
-                ($('#os0').val().length < 29) 
-                ){
-                $('.paypal_form').addClass('not_ready');
-            }else{
-                $('.paypal_form').removeClass('not_ready');
-            }
+            checkActivationKey();
         });        
 
         $('#paypal_form').bind('submit',function(e){
@@ -639,6 +632,17 @@ Small preview of a few ways to use Gridley™.
     });
     /* 20181021222705 */
 
+    function checkActivationKey(){
+        if(
+            ($('#os0').val() == '') ||
+            ($('#os0').val().length < 29) 
+            ){
+            $('.paypal_form').addClass('not_ready');
+        }else{
+            $('.paypal_form').removeClass('not_ready');
+        }        
+    }
+
     function processPageVars(){
         $('#paypal_form').hide();
         $('#paypal_thanks').hide();        
@@ -647,6 +651,16 @@ Small preview of a few ways to use Gridley™.
             // document.location.href ='#purchased';
         }else{
             $('#paypal_form').show();            
+        }
+
+        // activation key in url?
+        if(document.location.search.indexOf('?ak=',0)>-1){            
+            var params = parseQueryString();
+            var activationKey = params["ak"];
+            if(activationKey != null && activationKey != undefined){
+                $('#os0').val(activationKey);
+                checkActivationKey();
+            }
         }
     }
 
@@ -657,6 +671,21 @@ Small preview of a few ways to use Gridley™.
     function showTerms(){
         $('#terms').toggleClass('show');
     }
+
+    var parseQueryString = function() {
+
+        var str = window.location.search;
+        var objURL = {};
+
+        str.replace(
+            new RegExp( "([^?=&]+)(=([^&]*))?", "g" ),
+            function( $0, $1, $2, $3 ){
+                objURL[ $1 ] = $3;
+            }
+        );
+        return objURL;
+    };
+
 
     </script> 
 </body> 
