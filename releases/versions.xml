@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <versions>
-	<version>
-		<build>1.0.20181000</build>
+<!-- 	<version>
+		<build>1.0.2.1255</build>
 		<desc>First official update</desc>
-	</version>		
+	</version>		 -->
 	<version>
-		<build>1.0.20180901</build>
+		<build>1.0.2.1255</build>
 		<desc>Initial release version</desc>
 	</version>	
 </versions>
