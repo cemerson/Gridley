@@ -42,8 +42,7 @@ h3 {
 }
 
 #paypal_form.disabled,
-.paypal_form.disabled,
-#paypal_form{
+.paypal_form.disabled{
     display:none;
     height: 1px;
     overflow: hidden;
@@ -107,6 +106,25 @@ label#lbAgree a{
 .download_now{
     color:#fff !important;
 }
+.download_now.loading{
+    opacity: .3;
+    pointer-events: none !Important;
+}
+.download_now small{
+    display: inline-block;
+    background-color: rgba(0,0,0,.15);
+    color: rgba(255,255,255,.5);
+    border: px solid;
+    width: auto;
+    text-align: left;
+    margin-left: 33px;
+    font-size: 11px;
+    float: left;
+    padding: 3px 7px;
+    border-radius: 5px;
+    margin-top: 3px;
+    margin-bottom: 0px;    
+}
 
 #nocrap:before{
     /* content:''; */
@@ -125,7 +143,19 @@ label#lbAgree a{
 #nocrap a:active,#nocrap a:visited,#nocrap a{
     color:#fff;
 }
+.release sup {
+    color:#fff;
+    background-color:#aaa;
+    font-size:11px;
+    padding:2px 5px;
+    margin-left:6px;
+    border-radius:10px;
+    font-weight:normal;
+}
 
+div.hidden,label.hidden, *.hidden{
+    display:none;
+}
 
    </style>
 </head> 
@@ -141,7 +171,7 @@ label#lbAgree a{
 
             <h2>What is Gridley?</h2>            
         <div class='video_thumb'>
-            <a href='https://player.vimeo.com/video/305373771' class='iframe colorbox-load vimeo cboxElement'><img  src='images/gridley-preview-vimeo-thumb.png?raw=true'/></a>
+            <a href='https://player.vimeo.com/video/308337812' class='iframe colorbox-load vimeo cboxElement'><img  src='images/gridley-preview-vimeo-thumb-20181226.png?raw=true'/></a>
             <br/><span>Click to see a preview of Gridley™ in action!</span>
         </div>
             <p>Gridley™ is a very small but powerful Windows application that generates one image from multiple images. It can save you a lot of time in a variety of situations such as:</p>
@@ -157,7 +187,7 @@ label#lbAgree a{
             <br clear="all"/>            
             Gridley™ is free so download it today and see if you find it useful too! 
             <br/>
-            <a oldhref="Javascript:alert('Coming very soon!');" href="" class="download_now big_button">Download for Windows</a>   
+            <a oldhref="Javascript:alert('Coming very soon!');" href="" class="download_now big_button loading">Download for Windows<small>Version: ...</small></a>   
             <!-- <small class="download">For Windows 7 and higher</small><br /> -->
             <!-- <input type="checkbox" id="chkLegal" name="chkLegal"> -->
             <label id="lbAgree">By downloading and using this software you agree to the <a href='Javascript:showTerms();'>terms of use</a>.</label>
@@ -205,15 +235,15 @@ label#lbAgree a{
 <td style='vertical-align: top;width:65%'>  
         <h2>Single User License Version</h2>                        
 <p>
-            Gridley™ has no time limits or major functionality restrictions so you can use it as long as you want for free. However if you find yourself using it often you might want to consider purchasing the Single User License. For just the price a coffee you can remove the watermark, unlock additional settings, qualify for any license-only features in the future and just feel good about yourself in general! 
+            Gridley™ has no time limits or major functionality restrictions so you can use it as long as you want for free. However if you find yourself using it often you might want to consider purchasing the Single User License. For just a few bucks you can remove the watermark, unlock additional settings, qualify for any license-only features in the future ... and just feel good about yourself in general! 
 
     <div id="purchase_section">
-    <h3>Purchase <span>(Soon!)</h3>    
-    <label class="purchase_soon">
+    <h3>Purchase <span class='hidden'>(Soon!)</span></h3>    
+    <label class="purchase_soon hidden">
 <img src="images/buynow-pp-v2.png" style="float:right;opacity:.4"/>
     Eventually there will be a way to purchase the Single User License for a couple bucks but I'm not going to go live with that until I've gotten some feedback and I feel that  Gridley™ has been tested enough by other users to work out any possible bugs and/or make any necessary adjustments.</label>
 <br clear="all"/>
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="paypal_form" class='paypal_form not_ready disabled'>
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="paypal_form" class='paypal_form not_ready'>
         To buy a single user license enter your Activation Key below and click the Buy Now button to go through the secure PayPal payment process.
         <br/>&nbsp;
     <table id="paypal_table">
@@ -288,7 +318,12 @@ For a limited time you can get a Single User License for FREE to anyone who shar
 
             <hr/>
             <h2>Updates</h2>
-            <p>Gridley™ may be updated from time to time in the future. If you want to be notified when there are updates head over to the <a href="https://www.facebook.com/gridleyapp" target="_blank">Facebook page</a> and click the like/follow button.</p>            
+            <p>Gridley™ may be updated from time to time in the future. If you want to be notified when there are updates head over to the <a href="https://www.facebook.com/gridleyapp" target="_blank">Facebook page</a> and click the like/follow button. For details about a specific release click the links below (most recent at top).</p>            
+            
+            <h3 class='release'><a href="https://github.com/cemerson/gridley/releases/tag/1.0.1028.1713" target="_blank">Update 1.0.1028.1713</a><sup>20181226</sup></h3>
+            <h3 class='release'><a href="https://github.com/cemerson/gridley/releases/tag/1.0.2.1255" target="_blank">Initial Release 1.0.2.1255</a><sup>20181211</sup></h3>
+
+                
 
 &nbsp;<p/>
 
@@ -296,7 +331,7 @@ For a limited time you can get a Single User License for FREE to anyone who shar
     </div>
     <footer id="edinc">
         <a href="https://github.com/cemerson/gridley/issues" target="_blank">Report Bug or Suggestion</a>
-        <a href="#" class="download_now">Download</a>
+        <a href="#" class="download_now loading">Download</a>
         <a href="https://www.facebook.com/gridleyapp" target="_blank">Facebook Page</a>        
         <small>Gridley™ by Emerson Design, Inc. &copy; 2018</small>
     </footer>
@@ -423,10 +458,13 @@ For a limited time you can get a Single User License for FREE to anyone who shar
           timeAgo = (dateDiff / oneDay).toFixed(1) + " days ago";
         }
         var releaseInfo = release.name + " was updated " + timeAgo + " and downloaded " + downloadCount.toLocaleString() + " times.";
+        console.log('releaseInfo:' + releaseInfo);
         // $(".download").attr("href", asset.browser_download_url);
         // $(".release-info").text(releaseInfo);
         // $(".release-info").fadeIn("slow");
         // console.log('download: (' + asset.browser_download_url + ')');
+        $('.big_button.download_now small').text(release.name);
+        $('.download_now').removeClass('loading');
         $('.download_now').attr('href',asset.browser_download_url);
       });
     }
