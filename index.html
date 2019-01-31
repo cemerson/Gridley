@@ -217,6 +217,54 @@ color:#999 !important;
 }
 
 
+a.download_now.big_button {
+    text-align:left;
+    text-indent:17px;
+    background-color:#333 !important;
+}
+
+a.download_now.big_button.win7 {
+    background-image:url(images/windows7.png) !important;
+    background-position:96% 8px;
+    background-color:dodgerblue !important;
+    background-size:23px auto;
+}
+
+a.download_now.big_button label,
+a.download_now.big_button small,
+a.download_now.big_button span{
+    text-indent:0px !Important;
+    margin-left:15px !important;
+}
+
+a.download_now.big_button {
+    float:left !important;
+    clear:none !important;
+}
+
+a.download_now.big_button.win7{
+    margin-right:10px;
+}
+
+img.msstore {
+    float:right;
+    margin-left:20px;
+}
+small.ms_store_note {
+    width:65%;
+    background-color:transparent;
+    color:#999;
+    text-align:left;
+    margin-top:0;
+    float:none;
+    clear:none;
+}
+
+a.ms_buy_button img{
+width:200px !Important;
+margin:15px 0px 5px !important;
+}
+
    </style>
 </head> 
 
@@ -247,7 +295,9 @@ color:#999 !important;
             <br clear="all"/>            
             Gridley™ is free so download it today and see if you find it useful too! 
             <br/>
-            <a oldhref="Javascript:alert('Coming very soon!');" href="" class="download_now big_button loading">Download for Windows<small>Version: ...</small></a>   
+            <a href="" class="download_now big_button loading win7">Download Free Version<small>Works Windows 7-10</small></a>
+
+            <a href="https://www.microsoft.com/store/apps/9P12J49H94HK" target="_blank" class="download_now big_button loading">Get Full Version<small>For Windows 10</small></a>   
             <!-- <small class="download">For Windows 7 and higher</small><br /> -->
             <!-- <input type="checkbox" id="chkLegal" name="chkLegal"> -->
             <label id="lbAgree">By downloading and using this software you agree to the <a href='Javascript:showTerms();'>terms of use</a>.</label>
@@ -256,7 +306,7 @@ color:#999 !important;
 
 <blockquote>
     
-
+ 
         <center><h2>GRIDLEY™ LICENSE AGREEMENT</h2></center><br>
         <p>IMPORTANT-READ CAREFULLY: This End-User License Agreement ("EULA") is a legal agreement between you (either an individual or a single entity) and EMERSON DESIGN, INC identified above, which includes the User's Guide, any associated SOFTWARE components, any media, any printed materials other than the User's Guide, and any "online" or electronic documentation ("SOFTWARE"). By installing, copying, or otherwise using the SOFTWARE, you agree to be bound by the terms of this EULA. If you do not agree to the terms of this EULA, do not install or use the SOFTWARE.</p> 
         <br>
@@ -297,6 +347,21 @@ color:#999 !important;
 <a href="images/screenshot-20181226-mg.png" class="colorbox colorbox_img"><img src="images/thumbs/screenshot-20181226-mg.png" class='screenshot_thumb'/></a>
 </p>
 
+<a name="purchased"></a><a name="purchase"></a>
+<hr/>
+<table><tr>
+<td style='vertical-align: top;width:65%'>  
+        <h2>Get the Full Version!</h2>                        
+<p><a href="images/gridley-ms-store.png?raw=true" class="colorbox"><img src="images/gridley-ms-store.png?raw=true" class="msstore"/></a>
+            The free version of Gridley™ has no time limits or major functionality restrictions so you can use it as long as you want for free. However if you find yourself using it often you might want to consider purchasing the full version from the Microsoft store. For just a few bucks you can remove the watermark, unlock additional settings, qualify for any license-only features in the future ... and just feel good about yourself in general! 
+            <br/>
+            <a href="https://www.microsoft.com/store/apps/9P12J49H94HK" class="ms_buy_button" target="_blank"><img src="images/get-from-ms-white.png?raw=true" alt="Get Gridley from Microsoft Store"/></a>
+            <small class='ms_store_note'>For now you can only get the full version if you have Windows 10 but if some people still on Windows 7 are interested I may add a way to get the full version for them too.</small></p>            
+        </td>
+    </tr>
+    </table>
+
+&nbsp;
 <hr/>
 <h2>Reviews & Listings</h2>
 <p>Gridley has been listed on some major download sites! Click the logos below to view each listing.
@@ -313,12 +378,7 @@ color:#999 !important;
 </p>
 <br clear="all"/>
 
-
-
-
-<a name="purchased"></a><a name="purchase"></a>
-<hr/>
-<table><tr>
+<!-- <table><tr>
 <td style='vertical-align: top;width:65%'>  
         <h2>Single User License Version</h2>                        
 <p>
@@ -345,7 +405,7 @@ color:#999 !important;
             <input type="image" width="134" src="images/buynow-pp-v2.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" style="margin-top:-3px;">                        
         </td>
     </tr>
-    </table>
+    </table> 
     </form>
     </div>
 
@@ -363,7 +423,7 @@ color:#999 !important;
                         <li>Probably more features in future ...</li>
                     </ul>
                   </div>
-            <!-- <a href="https://apps.chris-emerson.com/store/product/gridley/" target="_blank" class="big_button">Gridley Single User License</a> -->
+            <a href="https://apps.chris-emerson.com/store/product/gridley/" target="_blank" class="big_button">Gridley Single User License</a>
 
             </td>
             </tr>
@@ -380,7 +440,7 @@ For a limited time you can get a Single User License for FREE to anyone who shar
     </ol>
 <li>If you did everything right you will get your Single User License via email within one day or so.</li>
 </ul>
-
+-->
 
 
 
@@ -405,8 +465,9 @@ For a limited time you can get a Single User License for FREE to anyone who shar
             <p class="FAQ_Q">Is Gridley™ available on any other platforms besides Microsoft Windows?</p>
             <p class="FAQ_A">Not at this time.</p>
 
-            <p class="FAQ_Q">Are refunds available for the Single User License?</p>
-            <p class="FAQ_A">Sorry there are no refunds. Please try the free version of Gridley™ on your computer first to make sure it works well for you before purchasing the Single User License.</p>
+            <p class="FAQ_Q">What versions of Windows does Gridley work on?</p>
+            <p class="FAQ_A">The free version of Gridley works on Windows 7 - 10. The full version is currently only available for Windows 10 users. However if enough Windows 7 users request the Full Version I may offer that option.</p>
+            
 
             <hr/>
             <h2>Updates</h2>
@@ -555,9 +616,9 @@ For a limited time you can get a Single User License for FREE to anyone who shar
         // $(".release-info").text(releaseInfo);
         // $(".release-info").fadeIn("slow");
         // console.log('download: (' + asset.browser_download_url + ')');
-        $('.big_button.download_now small').text(release.name);
+        // $('.big_button.download_now small').text(release.name);
         $('.download_now').removeClass('loading');
-        $('.download_now').attr('href',asset.browser_download_url);
+        $('.download_now.win7').attr('href',asset.browser_download_url);
       });
     }
 
