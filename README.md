@@ -1,4 +1,4 @@
 ## What is Gridley™? 
 
-To download and read more about Gridley™: The Image Grid Generator go here:
-http://cemerson.github.io/gridley/
+To try or buy Gridley™: The Image Grid Generator go here:
+https://emersondesigninc.github.io/gridley/
